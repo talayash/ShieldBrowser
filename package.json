@@ -1,0 +1,33 @@
+{
+  "name": "shieldbrowser",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm-run-all2 --parallel dev:ui dev:bg",
+    "dev:ui": "vite build --watch",
+    "dev:bg": "vite build --watch --config vite.background.config.ts",
+    "build": "npm-run-all2 build:ui build:bg",
+    "build:ui": "vite build",
+    "build:bg": "vite build --config vite.background.config.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/chrome": "^0.0.287",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "npm-run-all2": "^7.0.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.0",
+    "vite": "^6.0.0",
+    "vitest": "^3.0.0"
+  }
+}
